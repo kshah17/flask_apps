@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>To Do's Page</title>
+</head>
+
+<body>
+<h1> To Do App</h1>
+<a href="{{ url_for("index") }}">Home</a>
+<br>
+<a href="{{ url_for("add") }}">Add a New Todo</a>
+{% block body %}
+{% endblock body %}
+</body>
+</html>

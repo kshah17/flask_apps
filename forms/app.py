@@ -10,17 +10,17 @@ class BasicForm(FlaskForm):
     first_name = StringField('First Name')
     last_name = StringField('Last Name')
     submit = SubmitField('Add Name')
-    date_of_birth = DateField("DOB" 
+    date_of_birth = DateField("DOB")
     age = IntegerField("Age")
     salary = DecimalField("Salary", places=2)
-    favourtie_food = 
+    favourtie_food = SelectField("Pizza, Wings, Burger")
 
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 
 def register():
-    error = ""
+    error = " "
     form = BasicForm()
 
     if request.method == 'POST':
@@ -31,7 +31,7 @@ def register():
         if len(first_name) == 0 or len(last_name) == 0:
             error = "Please supply both first and last name"
         else:
-            return f'thank_you'{name} 
+            return 'thank, you'
 
     return render_template('home.html', form=form, message=error)
 

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block  body %}
+
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    {{ form.task.label }} {{ form.task }}
+    <br>
+    {{ form.submit }}
+</form>
+
+{% endblock  body %}
+
+
+
+
+
+<!-- <html>
+    <head>
+        <title>Add Task</title>
+    </head>
+    <body>
+        <div class='form'>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+
+                {{ form.task.label }} {{ form.task }}
+                <br>
+                {{ form.submit }}
+            </form>
+        </div>
+    </body>
+</html> -->
